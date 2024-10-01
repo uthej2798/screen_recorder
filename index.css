@@ -1,0 +1,155 @@
+*{
+    box-sizing:border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.vid-cont{
+    height:90vh;
+    width:100vw;
+    background-color: black;
+}
+
+video{
+    height:100%;
+    width:100%
+}
+
+.act-cont{
+    /* background-color: antiquewhite; */
+    width:5rem;
+    height:12rem;
+    top:calc((100vh - 12rem)/2);
+    right:5rem;
+    position:absolute;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    color:white;
+} 
+
+.act-cont > *{
+    width: 100%;
+    height:5rem;
+    border-radius: 50%;
+    border: 5px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.rec-btn{
+    background-color: red;
+    border-radius: 50%;
+    height:3rem;
+    width:3rem;
+    color:white;
+}
+
+.capture-btn{
+    background-color: grey;
+    border-radius: 50%;
+    height:3rem;
+    width:3rem;
+    color:white;
+}
+
+.scale-record{
+    animation-name: scale-record;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+
+@keyframes scale-record{
+    0%{
+        transform: scale(0.8);
+    }
+    50%{
+        transform: scale(1.0);
+    }
+    100%{
+        transform: scale(1.2);
+    }
+}
+
+.scale-capture{
+    animation-name: scale-capture;
+    animation-iteration-count: 10;
+    animation-duration: 1s;
+}
+
+@keyframes scale-capture{
+    0%{
+        transform: scale(0.8);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+.timer-cont{
+    position: absolute;
+    height:16rem;
+    width:5rem;
+    left: 3rem;
+    bottom:calc((100vh - 12rem)/2);
+    color: #b1edf5;
+    font-size: 1rem;
+}
+
+
+.timer{
+    display:none;
+}
+
+.filter-cont{
+    height:16rem;
+    width:5rem;
+    background-color: aqua;
+    position: absolute;
+    top: calc((100vh - 16rem) / 2);
+    left: 5rem;
+    z-index: 2;
+    background-image: url("https://picsum.photos/seed/picsum/200/300");
+}
+
+.filter{
+    background-image: url("https://picsum.photos/seed/picsum/200/300");
+    height: 4rem;
+    background-position: center;
+    background-size: 100% 100;
+    background-repeat: no-repeat;
+    background-blend-mode: color-burn;
+}
+
+.filter-layer{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.orange{
+    background-color: rgba(216, 118, 118, 0.444);
+}
+
+.brown{
+    background-color: hsla(0, 28%, 20%, 0.631);
+}
+
+.pink{
+    background-color: #e036d278;
+}
+
+.transparent{
+    background-color: transparent;
+}
+.none{
+    background-color: none;
+}
